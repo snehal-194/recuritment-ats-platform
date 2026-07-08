@@ -1,0 +1,237 @@
+/* Jobs View Layout */
+.jobs-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .jobs-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.jobs-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.job-select-card {
+  padding: 16px;
+  cursor: pointer;
+  border: 1px solid var(--glass-border);
+  transition: all var(--transition-fast);
+}
+
+.job-select-card:hover {
+  border-color: rgba(138, 43, 226, 0.3);
+  background: rgba(138, 43, 226, 0.01);
+}
+
+.job-select-card.active {
+  border-color: var(--accent-primary);
+  background: rgba(138, 43, 226, 0.04);
+  box-shadow: var(--glow-shadow-indigo);
+}
+
+.job-select-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.job-select-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Job Details & Analysis */
+.job-details-panel {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.job-detail-header {
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 20px;
+}
+
+.job-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.job-salary {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--accent-secondary);
+  font-family: 'Outfit', sans-serif;
+}
+
+.job-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Skills Matching Matrix */
+.skills-comparison-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .skills-comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skills-list-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skills-list-header {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.skill-match-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+}
+
+.skill-match-name {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.skill-match-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.skill-match-status.matched {
+  color: var(--accent-success);
+}
+
+.skill-match-status.missing {
+  color: var(--accent-danger);
+}
+
+/* Custom Skill Radar Chart (SVG) */
+.radar-chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+}
+
+.radar-chart-svg {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+}
+
+.radar-grid-line {
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 1;
+  fill: none;
+}
+
+.radar-axis-line {
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 1;
+}
+
+.radar-axis-label {
+  fill: var(--text-muted);
+  font-size: 8px;
+  font-weight: 500;
+  text-anchor: middle;
+}
+
+.radar-candidate-area {
+  fill: var(--accent-primary-glow);
+  stroke: var(--accent-primary);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 4px var(--accent-primary));
+}
+
+.radar-data-point {
+  fill: var(--accent-secondary);
+  stroke: #fff;
+  stroke-width: 1;
+}
+
+/* Candidate Selector in Jobs view */
+.candidate-compare-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--glass-border);
+  padding-top: 24px;
+  margin-top: 8px;
+}
+
+.candidate-compare-selector {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  color: var(--text-primary);
+  font-size: 13px;
+  outline: none;
+}
+
+.fit-meter-container {
+  margin-top: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--glass-border);
+}
+
+.fit-meter-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.fit-meter-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.fit-meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transition: width var(--transition-normal);
+}
