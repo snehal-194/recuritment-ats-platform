@@ -1,0 +1,53 @@
+:root {
+  /* Color Palette - Premium Obsidian Dark */
+  --bg-primary: #0a0b0d;
+  --bg-secondary: #12141c;
+  --bg-tertiary: #1a1d29;
+  
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  
+  /* Glowing Neon Accents */
+  --accent-primary: #8a2be2;      /* Electric Violet */
+  --accent-primary-hover: #7b1fa2;
+  --accent-primary-glow: rgba(138, 43, 226, 0.4);
+  
+  --accent-secondary: #00f5ff;    /* Cyan Glow */
+  --accent-secondary-glow: rgba(0, 245, 255, 0.25);
+  
+  --accent-success: #00ff87;      /* Neon Emerald */
+  --accent-success-glow: rgba(0, 255, 135, 0.2);
+  
+  --accent-warning: #ffaa00;      /* Amber Gold */
+  --accent-warning-glow: rgba(255, 170, 0, 0.2);
+  
+  --accent-danger: #ff0055;       /* Sunset Rose */
+  --accent-danger-glow: rgba(255, 0, 85, 0.2);
+
+  /* Glassmorphism Styles */
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-bg-hover: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.05);
+  --glass-border-hover: rgba(255, 255, 255, 0.09);
+  --glass-blur: blur(14px);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --glow-shadow-indigo: 0 0 20px rgba(138, 43, 226, 0.15);
+  --glow-shadow-cyan: 0 0 20px rgba(0, 245, 255, 0.15);
+  
+  /* Layout Spacing */
+  --sidebar-width: 260px;
+  --header-height: 70px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+  --radius-full: 9999px;
+}
